@@ -10,11 +10,12 @@ export class HomeComponent implements OnInit {
 
   private categories : Category[] = [];
 
+  private babyName: string = "Test";
   constructor() { }
 
   ngOnInit() {
-    this.categories.push(new Category("Baby"));
-    this.categories.push(new Category("SoundBoard"));
+    this.categories.push(new Category("Baby", "What did "+ this.babyName + " do today?"));
+    this.categories.push(new Category("SoundBoard", "Is " + this.babyName + " having trouble sleeping? Try some of these sounds!" ));
   }
 
 }

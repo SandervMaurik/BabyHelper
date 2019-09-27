@@ -1,11 +1,42 @@
 <div class="container">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col s6 m6" *ngFor="let category of this.categories">
                 <div class="card">
                     <div class="card-image">
-                        <!-- <span class="card-title">Card Title</span> -->
                         <img src="../../../assets/images/{{category.name}}.png">
+                    </div>
+                    <div class="card-content">
+                        <p>{{category.description}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>Baby name: </strong>{{this.babyName}}</p>
+                        <p><strong>Baby birthdate: </strong>{{this.babyBirthDate}}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l6" *ngFor="let category of this.categories">
+                <div class="card-panel grey lighten-5 z-depth-1">
+                    <div class="row valign-wrapper">
+                        <div class="col s4">
+                            <img src="../../../assets/images/{{category.name}}.png" alt="" class="responsive-img">
+                            <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s8">
+                            <span class="black-text">
+                                <p>{{category.description}}</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
